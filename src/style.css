@@ -1,0 +1,181 @@
+/* RESET */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background: #fff0f5; /* light lavender */
+  color: #222;
+}
+
+/* HEADER */
+.Header {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ff007f; /* hot pink */
+  border-bottom: 3px dashed #ffb6c1;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+
+/* FORM */
+.formm {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #fef6e4; /* light yellow cream */
+  border: 2px dashed #ff69b4; /* pink border */
+  padding: 25px;
+  text-align: center;
+  box-shadow: 4px 4px 12px rgba(255, 105, 180, 0.3); /* soft pink shadow */
+}
+
+.formm input,
+.formm button {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  border: 2px dashed #ffa500; /* orange border */
+  background-color: #fff8dc; /* cornsilk */
+  color: #222;
+  outline: none;
+}
+
+.formm button {
+  background-color: #00ffff; /* aqua */
+  border: 2px dashed #008b8b;
+  color: #000;
+}
+
+.formm button:hover {
+  background: #ff69b4; /* pink */
+  color: white;
+  cursor: pointer;
+}
+
+/* INGREDIENT LIST + CARDS */
+.card,
+.getRecipe {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f0fff0; /* honeydew */
+  border: 2px dashed #9370db; /* medium purple */
+  font-family: 'Courier New', monospace;
+  box-shadow: 5px 5px 10px rgba(147, 112, 219, 0.3); /* soft purple */
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  border-bottom: 2px dotted #8a2be2;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* BUTTONS */
+.GetRecipe {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #ffb347; /* peach/orange */
+  border: 2px dashed #ff6347; /* tomato */
+  color: #000;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.GetRecipe:hover {
+  background: #ff69b4;
+  color: white;
+  cursor: pointer;
+}
+
+/* RECIPE SECTION */
+section {
+  margin: 40px auto;
+  padding: 30px;
+  border: 2px dotted #20b2aa;
+  background-color: #f0f8ff;
+  font-family: 'Courier New', monospace;
+  max-width: 700px;
+  box-shadow: 6px 6px 15px rgba(32, 178, 170, 0.2);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #ff4500;
+}
+
+/* LOADING OVERLAY */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 182, 193, 0.4); /* light pink tint */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* LOADING POPUP BOX */
+.loading-popup {
+  background-color: #e0ffff; /* light cyan */
+  padding: 2rem 3rem;
+  border: 2px dashed #00ced1;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #333;
+  text-transform: uppercase;
+  animation: floatPop 1s ease-in-out infinite alternate;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 206, 209, 0.4);
+}
+
+/* FLOATY ANIMATION */
+@keyframes floatPop {
+  0% { transform: translateY(-5px) scale(1.01); }
+  100% { transform: translateY(5px) scale(1.03); }
+}
+
+/* TOASTIFY OVERRIDE */
+.Toastify__toast {
+  border: 2px dashed #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Courier New', monospace;
+}
+
+.Toastify__toast--success {
+  background-color: #98fb98;
+  color: #006400;
+}
+
+.Toastify__toast--error {
+  background-color: #ff6f61;
+  color: white;
+}
